@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showNativeAd() {
-        nativeAd = findViewById(R.id.cd_admob);
+        nativeAd = this.<CardView>findViewById(R.id.cd_admob);
         AdLoader adLoader = new AdLoader.Builder(this,"ca-app-pub-3940256099942544/2247696110")
                 .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
                     @Override

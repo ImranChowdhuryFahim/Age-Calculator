@@ -7,14 +7,17 @@
     android:layout_width="match_parent"
     tools:context=".MainActivity"
     android:background="@drawable/bg">
-    <LinearLayout
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
         android:orientation="vertical"
         android:weightSum="15"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
         <GridLayout
             android:id="@+id/mainGrid"
             android:columnCount="2"
@@ -23,7 +26,7 @@
             android:columnOrderPreserved="false"
             android:layout_weight="8"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="4dp"
             android:padding="14dp"
             >
 
@@ -31,6 +34,7 @@
 
             <!-- Column 1 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/grid1"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
@@ -70,6 +74,7 @@
 
             <!-- Column 2 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/grid2"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
@@ -112,6 +117,7 @@
 
             <!-- Column 1 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/grid3"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
@@ -152,6 +158,7 @@
 
             <!-- Column 2 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/grid4"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
@@ -219,4 +226,7 @@
         </GridLayout>
 
     </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
+
+
