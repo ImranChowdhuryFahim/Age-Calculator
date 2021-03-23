@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,8 +21,7 @@ import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class MainActivity extends AppCompatActivity {
-    private CardView nativeAd;
-
+    private CardView nativeAd,grid1,grid2,grid3,grid4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,43 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         showNativeAd();
+        grid1 = this.<CardView>findViewById(R.id.grid1);
+        grid2 = findViewById(R.id.grid2);
+        grid3 = findViewById(R.id.grid3);
+        grid4 = findViewById(R.id.grid4);
+        grid1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, calculateage.class);
+                startActivity(intent);
+
+            }
+        });
+        grid2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Savedate.class);
+                startActivity(intent);
+
+            }
+        });
+        grid3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CompareAge.class);
+                startActivity(intent);
+
+            }
+        });
+        grid4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DatepDay.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
 
     private void showNativeAd() {
